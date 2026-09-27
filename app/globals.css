@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{--bg:250 253 250;--surface:255 255 255;--ink:20 36 24;--muted:95 112 98;--accent:27 94 51;--gold:64 145 89;--line:222 233 224}
+.dark{--bg:12 20 14;--surface:22 33 24;--ink:236 245 238;--muted:158 178 161;--accent:99 199 130;--gold:70 150 96;--line:41 58 44}
+body{@apply bg-bg text-ink font-sans}
+h1,h2,h3{@apply font-display}
+@layer components{
+.btn{@apply rounded-full px-6 py-3 font-semibold text-white bg-accent transition hover:scale-105 active:scale-95;box-shadow:0 0 18px rgb(var(--accent)/.55)}
+.btn-ghost{@apply rounded-full px-5 py-2 font-semibold text-accent border border-accent transition hover:shadow-[0_0_18px_rgb(var(--accent)/.45)]}
+.field{@apply w-full rounded-xl border border-line bg-bg px-3 py-2 mb-3 focus:outline-none focus:border-accent}
+.card{@apply rounded-2xl border border-line bg-surface p-4}}
+@keyframes stripes{to{background-position:22px 0}}
+@keyframes popin{from{opacity:0;transform:scale(.94) translateY(8px)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
